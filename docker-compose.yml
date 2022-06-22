@@ -1,0 +1,53 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    container_name: postgres_oms
+    restart: always
+    environment:
+      POSTGRES_DB: omsdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      PGDATA: /var/lib/postgresql/data
+    ports:
+      - "5432:5432"  
+    volumes:
+      - db-data:/var/lib/postgresql/data    
+  pgadmin:
+    container_name: pgadmin4_oms
+    image: dpage/pgadmin4
+    restart: always 
+    ports:
+      - "8080:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: secret
+      PGADMIN_LISTEN_PORT: 80
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+  messagebus:  
+    image: rabbitmq:3-management    
+    container_name: rabbitmq_oms    
+    ports:
+      - "15672:15762"
+      - "5672:5672"
+    volumes:
+      - 'rabbitmq-data:/data'
+  vault:
+    image: vault    
+    container_name: vault_oms
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=myroot
+    cap_add:
+      - IPC_LOCK
+    ports:
+      - 8200:8200
+    volumes:
+      - "vault_data:/vault/file"  
+      - "vault_logs:/vault/logs"
+volumes:
+ rabbitmq-data:    
+ db-data:
+ pgadmin-data:
+ vault_data:
+ vault_logs:

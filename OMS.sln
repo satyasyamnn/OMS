@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Administration.Infrastu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Administration.Migrations", "Administration\OMS.Administration.Migrations\OMS.Administration.Migrations.csproj", "{F6D6E192-7B82-46F7-AF84-49C118F349B0}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8F1CA92E-386D-4977-811E-A07717B82A06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{F6D6E192-7B82-46F7-AF84-49C118F349B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D6E192-7B82-46F7-AF84-49C118F349B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D6E192-7B82-46F7-AF84-49C118F349B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1CA92E-386D-4977-811E-A07717B82A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1CA92E-386D-4977-811E-A07717B82A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1CA92E-386D-4977-811E-A07717B82A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1CA92E-386D-4977-811E-A07717B82A06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
