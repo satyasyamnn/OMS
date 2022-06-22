@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OMS.Administration.Domain\OMS.Administration.Domain.csproj" />
+    <ProjectReference Include="..\OMS.Administration.Persistence\OMS.Administration.Infrasturcture.csproj" />
+  </ItemGroup>
+
+</Project>
