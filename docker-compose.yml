@@ -18,7 +18,7 @@ services:
     image: dpage/pgadmin4
     restart: always 
     ports:
-      - "8080:80"
+      - "8081:80"
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.com
       PGADMIN_DEFAULT_PASSWORD: secret
@@ -28,14 +28,18 @@ services:
   messagebus:  
     image: rabbitmq:3-management    
     container_name: rabbitmq_oms    
+    restart: always
     ports:
-      - "15672:15762"
       - "5672:5672"
-    volumes:
-      - 'rabbitmq-data:/data'
+      - "15762:15762"
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"  
+      RABBITMQ_DEFAULT_PASS: "guest" 
+      RABBITMQ_ERLANG_COOKIE: 'secret code for cookie'
   vault:
     image: vault    
     container_name: vault_oms
+    restart: always
     environment:
       - VAULT_DEV_ROOT_TOKEN_ID=myroot
     cap_add:
@@ -45,8 +49,7 @@ services:
     volumes:
       - "vault_data:/vault/file"  
       - "vault_logs:/vault/logs"
-volumes:
- rabbitmq-data:    
+volumes:  
  db-data:
  pgadmin-data:
  vault_data:

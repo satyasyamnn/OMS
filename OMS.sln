@@ -15,6 +15,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Administration.Migratio
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{8F1CA92E-386D-4977-811E-A07717B82A06}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utilites", "Utilites", "{ADE03D80-56BA-411D-8C11-B658D1401875}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VaultReadandWrite", "Utilities\VaultReadandWrite\VaultReadandWrite.csproj", "{134DC469-FE89-4D96-B958-7968156A9E31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8E3C55ED-EB98-474F-B7EC-84EB1D2838D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OMS.Extensions.Configuration.Vault", "Shared\OMS.Extensions.Configuration.Vault\OMS.Extensions.Configuration.Vault.csproj", "{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD38DF63-38F3-4D84-9A6F-1ED800BCE8E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +54,14 @@ Global
 		{8F1CA92E-386D-4977-811E-A07717B82A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F1CA92E-386D-4977-811E-A07717B82A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F1CA92E-386D-4977-811E-A07717B82A06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134DC469-FE89-4D96-B958-7968156A9E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134DC469-FE89-4D96-B958-7968156A9E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134DC469-FE89-4D96-B958-7968156A9E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134DC469-FE89-4D96-B958-7968156A9E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +71,8 @@ Global
 		{100AB634-E59F-4323-9269-AC77F836C88F} = {D2A9E16D-E584-4765-A3FA-7E90D746206E}
 		{33AF8371-3F8D-4D65-8709-53FB8A0E96F2} = {D2A9E16D-E584-4765-A3FA-7E90D746206E}
 		{F6D6E192-7B82-46F7-AF84-49C118F349B0} = {D2A9E16D-E584-4765-A3FA-7E90D746206E}
+		{134DC469-FE89-4D96-B958-7968156A9E31} = {ADE03D80-56BA-411D-8C11-B658D1401875}
+		{F1EB1B5B-354B-44EC-91AE-C37F84AC9E87} = {8E3C55ED-EB98-474F-B7EC-84EB1D2838D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47EB29D3-7268-4F2E-8EEF-1515B35D2DAE}
