@@ -14,6 +14,7 @@ namespace OMS.Extensions.Configuration.Vault
     {
         private IVaultClient _vaultClient;
         private VaultConfigurationSource _source;
+        #nullable enable
         private ILogger? _logger;
         private VaultOptions _options;
 

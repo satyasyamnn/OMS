@@ -5,9 +5,9 @@ namespace OMS.Extensions.Configuration.Vault
 {
     public class VaultConfigurationSource : IConfigurationSource
     {
-        private ILogger? _logger;
-        public VaultOptions Options { get; private set; }
-
+        #nullable enable
+        private readonly ILogger? _logger;
+        public VaultOptions Options { get; private set; }        
         public VaultConfigurationSource(VaultOptions options, ILogger? logger)
         {
             _logger = logger;

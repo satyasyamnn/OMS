@@ -3,11 +3,6 @@
 	<PropertyGroup>
 		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>
-	
-	<ItemGroup>
-	  <None Include="..\..\.editorconfig" Link=".editorconfig" />
-	</ItemGroup>
-
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
 			<PrivateAssets>all</PrivateAssets>
@@ -18,11 +13,10 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
-		<PackageReference Include="VaultSharp" Version="1.7.0.4" />
+		<PackageReference Include="Vault.Configuration.Extensions" Version="1.0.0" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\Shared\OMS.Extensions.Configuration.Vault\OMS.Extensions.Configuration.Vault.csproj" />
+	<ItemGroup>		
 		<ProjectReference Include="..\OMS.Administration.Domain\OMS.Administration.Domain.csproj" />
 		<ProjectReference Include="..\OMS.Administration.Migrations\OMS.Administration.Migrations.csproj" />
 		<ProjectReference Include="..\OMS.Administration.Persistence\OMS.Administration.Infrasturcture.csproj" />

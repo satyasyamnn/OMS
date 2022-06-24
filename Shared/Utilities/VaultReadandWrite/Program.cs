@@ -15,7 +15,7 @@ namespace VaultReadandWrite
             VaultClientSettings settings = new VaultClientSettings("http://localhost:8200", authInfo);
             IVaultClient _authenticatedVaultClient = new VaultClient(settings);
             // RunKeyValueV1Sample(_authenticatedVaultClient);
-            WriteToVaultV2Sample(_authenticatedVaultClient);
+            //WriteToVaultV2Sample(_authenticatedVaultClient);
             RunKeyValueV2Sample(_authenticatedVaultClient);
             Console.Read();
         }
@@ -49,7 +49,7 @@ namespace VaultReadandWrite
             var kv2SecretsEngine = new SecretsEngine
             {
                 Type = SecretsEngineType.KeyValueV2,
-                Path = "OMSSettings"
+                Path = "OMSSettings/Development"
             };
             var paths = _authenticatedVaultClient.V1.Secrets.KeyValue.V2.ReadSecretPathsAsync("", mountPoint: kv2SecretsEngine.Path).Result;
             foreach (string subPath in paths.Data.Keys)

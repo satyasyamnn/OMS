@@ -7,6 +7,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class VaultConfigurationExtensions
     {
+        #nullable enable
         public static IConfigurationBuilder AddVaultConfiguration(this IConfigurationBuilder configuration, Func<VaultOptions> options, ILogger? logger = null)
         {
             if (configuration == null) throw new ArgumentNullException(nameof(configuration));
